@@ -221,12 +221,29 @@ padding: 0.5rem;
 .fscreen { grid-area: 1 / 11 / 2 / 12; border: 1px solid #000000;}
 .setting { grid-area: 1 / 4 / 2 / 7; }
 
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+  
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
 
 .btn-group .button {
     background-color: white; 
     border: 1px solid black;
     color: black;
-    padding: .2rem;
+    padding: .2rem .5rem;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -296,6 +313,12 @@ li{
     display: none;
 }
 
+.catalog{
+    border: 1.5px solid black;background-color: cornflowerblue;
+    color: rgb(230, 230, 230);
+    padding: .2rem;
+    margin-bottom: .3rem;
+}
 
 @media only screen and (min-width:376px){
     header{

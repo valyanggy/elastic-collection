@@ -5,6 +5,7 @@
 html{
     font-family: 'Sawarabi Gothic', sans-serif;
     
+    
 }
 
 img{
@@ -71,14 +72,19 @@ justify-content: space-between;
 
 .player{
     max-width: 100%;
-    height: 30vh;
+    max-height: 30vh;
+    margin-bottom: .5rem;
+    
+    
     overflow-y:scroll;
+    /* overflow-x:hidden; */
 }
 
 .gallery{
     overflow:auto;
-    white-space: nowrap;
-    margin-bottom: .4rem;
+    height:20%;
+    /* white-space: nowrap; */
+    
 
 }
 .gallery img{
@@ -88,6 +94,93 @@ justify-content: space-between;
     max-width: 100%;
     padding-bottom: .2rem;
 }
+
+/* for bullet/flying comments: */
+div.bullets-container{
+  display: flex;
+  /* flex-wrap: column wrap; */
+  width: 30vh;
+  /* height: 20vh; */
+
+  overflow:auto;
+  /* white-space: nowrap; */
+
+}
+
+div.bullet{
+  font-size: 1.5rem;
+  max-height: 10vh;
+  width:100%;
+  color: rgb(230, 230, 230);
+  overflow:hidden;
+  
+  -webkit-text-stroke: 0.5px black;
+  position: fixed;
+  -webkit-animation: scroll 25s infinite linear;
+  -moz-animation: scroll 25s infinite linear;
+  -o-animation: scroll 25s infinite linear;
+  animation: scroll 25s infinite linear;
+
+}
+
+
+@keyframes scroll {
+  0% {
+    left: 100px;
+  }
+  100% {
+    left: -2050px;
+  }
+}
+@-webkit-keyframes scroll {
+  0% {
+    left: 100px;
+  }
+  100% {
+    left: -2050px;
+  }
+}
+
+/* .row1{
+  animation-delay: 20s;
+}
+.row2{
+  animation-delay: 4s;
+}
+.row1{
+  animation-delay: 1s;
+} */
+
+.bullet:hover {
+  animation-play-state: paused;
+}
+
+
+/* for scroll indicator: */
+#indicator{
+  position: relative;
+  top:0;
+  left:0;
+  height: 15px;
+  width: 100%;
+  background: #f1f1f1;
+  z-index: 999;
+
+}
+
+.progress-container {
+  width: 100%;
+  height: 8px;
+  background: #ccc;
+}
+
+#myBar {
+  height: 8px;
+  background: #4caf50;
+  width: 0%;
+}
+
+
 
 .gallery::-webkit-scrollbar {
     width: 1.5em;
@@ -104,6 +197,7 @@ justify-content: space-between;
   outline: 1px solid rgb(40, 46, 51);
   
 }
+
 
 
 
@@ -243,6 +337,7 @@ padding: 0.5rem;
     background-color: white; 
     border: 1px solid black;
     color: black;
+    -webkit-box-shadow: inset 0 0 2px rgba(0,0,0,0.5);
     padding: .2rem .5rem;
     text-align: center;
     text-decoration: none;
@@ -272,7 +367,7 @@ padding: 0.5rem;
 }
 
 .list{
-    height: 30vh;
+    height: 25vh;
     overflow: auto;
     width: 96%;
 
@@ -314,13 +409,23 @@ li{
 }
 
 .catalog{
-    border: 1.5px solid black;background-color: cornflowerblue;
+    border: 1.5px solid black;background-color: rgb(77, 77, 77);
     color: rgb(230, 230, 230);
     padding: .2rem;
-    margin-bottom: .3rem;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+    margin-bottom: .1rem;
 }
 
-@media only screen and (min-width:376px){
+@media only screen and (min-width:542px){
+  .screen{
+    height: 50vh;
+  }
+  .player{
+    max-height: 38vh;
+}
+}
+
+@media only screen and (min-width:750px){
     header{
         border:none;
         padding-top: 1rem;
@@ -348,10 +453,12 @@ li{
 
     .screen{
         max-width: 65%;
+        height:70vh;
+  
     }
     .player{
         max-width: 100%;
-        height: 63vh;
+        max-height: 55vh;
         overflow-y:scroll;
     }
     .comments{

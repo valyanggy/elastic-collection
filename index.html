@@ -44,21 +44,31 @@
     <div class="container">
         <!-- left -->
         <div class="screen">
-            <div class="ad">
-                <img src="img/kumon.png" width="250px" alt="image">
-            </div>
+
             <div class="player">
                 <div class="bullets-container">
                     <div class="bullet">
-                        <!-- <li class="row1"></li>
+                        <li class="row1"></li>
                         <li class="row2"></li>
-                        <li class="row3"></li> -->
+                        <li class="row3"></li>
                     </div>
                 </div>
                 <div class="gallery"></div>
                 
+                <div class="slideshow-container"></div>
+                
             </div>
-            <div id="indicator"></div>
+            <div class="ad">
+                <div id="burst-12"></div>
+                <a href="#" class="close"></a>
+                <img src="img/kumon.png" width="250px" alt="image">
+            </div>
+            <div id="indicator">
+
+                <div class="progress-container">
+                    <div class="progress-bar" id="myBar"></div>
+                  </div>  
+            </div>
 
             <div class="controls tooltip">
                 <span class="tooltiptext">Hey, we are just fake buttons:p</span>
@@ -113,8 +123,8 @@
 
     <script src="lib/airtable.browser.js"></script>
     <script src="lib/main.js"></script>
-    <script src="lib/scroll.js"></script>
     <script src="lib/gallery.js"></script>
+    <!-- <script src="lib/gallery.js"></script> -->
 </body>
 
 </html>

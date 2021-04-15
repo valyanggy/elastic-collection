@@ -146,6 +146,8 @@ justify-content: space-between;
     /* overflow-x:hidden; */
 }
 
+/* reference from: https://codepen.io/dudleystorey/pen/ehKpi */
+
 @keyframes slidy {
   0% {
     left: 0%;

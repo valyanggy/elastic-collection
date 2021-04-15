@@ -643,5 +643,11 @@ li{
     left: 55%;
     top: 1px;
   }
+
+  .player{
+
+    max-height: 49vh;
+
+}
  
 }

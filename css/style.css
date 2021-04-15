@@ -146,6 +146,58 @@ justify-content: space-between;
     /* overflow-x:hidden; */
 }
 
+@keyframes slidy {
+  0% {
+    left: 0%;
+    opacity:0;
+  }
+  /* 20% {
+    left: 0%;
+  } */
+  25% {
+    left: -100%;
+    opacity:1;
+  }
+  /* 45% {
+    left: -100%;
+  } */
+  50% {
+    left: -200%;
+  }
+  /* 70% {
+    left: -200%;
+  } */
+  75% {
+    left: -300%;
+  }
+  /* 95% {
+    left: -300%;
+  } */
+  100% {
+    left: -400%;
+  }
+}
+
+div#slider {
+  overflow: hidden;
+}
+div#slider figure img {
+  width: 20%;
+  float: left;
+}
+div#slider figure {
+  position: relative;
+  width: 500%;
+  margin: 0;
+  left: 0;
+  text-align: left;
+  font-size: 0;
+  animation: 20s slidy infinite;
+}
+
+
+
+
 .gallery{
     overflow:auto;
     height:20%;
@@ -162,6 +214,38 @@ justify-content: space-between;
     padding-bottom: 1rem;
 }
 
+.mySlides {display: none}
+img {vertical-align: middle;}
+.slideshow_container {
+  max-width: 100%;
+  max-height: 27vh;
+  /* max-width: 600px; */
+  position: relative;
+  margin: auto;
+}
+
+/* .prev, .next {
+  background-color: black;
+  
+    cursor: pointer;
+    position: absolute;
+    top: 90%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+   
+    user-select: none;
+  }
+
+  .prev {
+    left: 10%;
+   
+  } */
+
 /* for bullet/flying comments: */
 div.bullets-container{
   display: flex;
@@ -169,7 +253,7 @@ div.bullets-container{
   width: 30vh;
   /* height: 20vh; */
 
-  overflow:auto;
+  overflow:hidden;
   /* white-space: nowrap; */
 
 }
@@ -180,6 +264,7 @@ div.bullet{
   width:100%;
   color: rgb(230, 230, 230);
   overflow:hidden;
+  z-index:100;
   
   -webkit-text-stroke: 0.5px black;
   position: fixed;
@@ -537,7 +622,7 @@ li{
     }
     .player{
         max-width: 100%;
-        max-height: 55vh;
+        max-height: 52vh;
         overflow-y:scroll;
     }
     .comments{
